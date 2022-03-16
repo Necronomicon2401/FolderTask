@@ -2920,6 +2920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hair: {fileID: 137671433726287490}
   cloth: {fileID: 137972207870889492}
+  gender: Male
 --- !u!1 &1672909316657688
 GameObject:
   m_ObjectHideFlags: 0

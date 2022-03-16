@@ -21,6 +21,13 @@ public class StreamingAssetsController : MonoBehaviour
             {
                 continue;
             }
+            
+            var modelMaterials = obj.GetComponent<ModelMaterials>();
+
+            if (!file.Name.Contains(modelMaterials.gender))
+            {
+                continue;
+            }
 
             if (!file.Name.Contains(hair))
             {
@@ -34,7 +41,7 @@ public class StreamingAssetsController : MonoBehaviour
                 
             texture2D.LoadImage(bytes);
 
-            obj.GetComponent<ModelMaterials>().hair.material.mainTexture = texture2D;
+            modelMaterials.hair.material.mainTexture = texture2D;
             return;
         }
     }
@@ -53,6 +60,13 @@ public class StreamingAssetsController : MonoBehaviour
             {
                 continue;
             }
+            
+            var modelMaterials = obj.GetComponent<ModelMaterials>();
+
+            if (!file.Name.Contains(modelMaterials.gender))
+            {
+                continue;
+            }
 
             if (!file.Name.Contains(cloth))
             {
@@ -66,7 +80,7 @@ public class StreamingAssetsController : MonoBehaviour
                 
             texture2D.LoadImage(bytes);
 
-            obj.GetComponent<ModelMaterials>().cloth.material.mainTexture = texture2D;
+            modelMaterials.cloth.material.mainTexture = texture2D;
             return;
         }
     }
